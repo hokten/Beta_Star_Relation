@@ -278,14 +278,39 @@ Throughout this paper L denotes a lattice.
 %                                                 Theorem 2.14
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
-\begin{teorem}
+\begin{teorem}\label{12}
   Let $ L $ be a distributive lattice and $ a,b \in L $. If $ a \oplus b = 1 $ and $ a \beta_* x $ 
   then $ a \leq x $ and $ b \wedge x \ll L $.
 \end{teorem}
 \begin{ispat}
-
+    Since $ a \oplus b = 1 $ and $ a \beta_* x $, $ x \vee b = 1 $. Hence $ a \wedge ( x \vee b ) = a \wedge 1 = a $. 
+    By the modular law, $ ( a \wedge x ) \vee ( a \wedge b ) = a $. Since $ a \wedge b = 0 $, 
+    it follows that $ a \wedge x = a $, and so $ a \leq x $. Since $ x \beta_* a $ and $ a \leq x $, 
+    it follows from that Theorem \ref{11} \ref{11.4} $ b \wedge x \ll L $.
 \end{ispat}
 
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+%                                                 Theorem 2.15
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+\begin{teorem}\label{13}
+    Let $ L $ be a distributive lattice and $ x \in L $. If $ x \beta_* y $ and there exists a 
+    decomposition $ a \oplus b = 1 $ such that $ a \leq x $ and $ b \wedge x \ll L $ then same 
+    decomposition exists for $ y \in L $ such that $ a \leq y $ and $ b \wedge y \ll L $
+\end{teorem}
+\begin{ispat}
+    Since $ a \leq x $ and $ b \wedge x \ll L $, it follows from Theorem \ref{11} \ref{11.4} 
+    that $ a \beta_* x $. Since $ x \beta_* y $ and $ a \beta_* x $, $ a \beta_* y $. 
+    By Theorem \ref{12}, $ a \leq y $ and $ b \wedge y \ll L $.
+\end{ispat}
+
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+%                                                 Theorem 2.16
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+\begin{teorem}
+
+\end{teorem}
 
 
 
