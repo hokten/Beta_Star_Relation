@@ -307,13 +307,85 @@ Throughout this paper L denotes a lattice.
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 %                                                 Theorem 2.16
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+%
+%
+%
+%
+%
+%
 
-\begin{teorem}
-
+\begin{teorem}\label{14}
+    Let $ x \in L $ and $ k $ be a maximal element of $ L $ different from $ 1 $.
+    \begin{enumerate}[label=(\roman{*}), ref=(\roman{*})]
+        \item 
+            %TODO 
+            \label{14.1}
+        \item
+            If $ x \beta_*y $ and $ x \leq k $ then $ y \leq k $. \label{14.2}
+        \item
+            If $ x \beta_* k $ then $ x \leq k $. \label{14.3}
+        \item
+            If $ x \beta_* k $ and $ w $ is a weak supplement of $ x $ in $ L $ then $ k = x \vee ( k \wedge x ) $ 
+            and  $ k \wedge w \ll L $. \label{14.4}
+    \end{enumerate}
 \end{teorem}
 
+\begin{ispat}
+    \begin{enumerate}
+        \item
+            Assume that $ x \leq b $. Then $ a \vee b \vee x = 1 $. Since $ x \beta_* a $, $ a \vee b = 1 $ so $ b = 1 $. 
+            %FIXME BEGIN
+            This is a contradiction with $ b $ is different from $ 1 $. 
+            %FIXME END
+            Therefore $ x \not\le b $.
+        \item
+            Let $ y \not\le k $. Then $ k \vee y = 1 $. Since $ x \beta_* y $, $ k = k \vee x = 1 $. This is a contradiction. 
+            Therefore $ y \leq k $.
+        \item
+            Let $ x \beta_* k $ and $ x \not\le k $. Since $ k $ is a maximal element, $ x \vee k = 1 $. Then from $ x \beta_* k $, 
+            we obtain $ k = 1 $. This is a contradiction. Therefore $ x \leq k $.
+        \item
+            Let $ x \beta_* k $ and $ w $ is a weak supplement of $ x $ in $ L $. By the Theorem \ref{8} \ref{8.2}, 
+            also $ w $ is a weak supplement of $ k $. Hence $ k \vee w = 1 $ and $ k \wedge w \ll L $. 
+            Since $ x \beta_* k $, it follows from \ref{14.3} that $ x \leq k $. Since $ x \vee w = 1 $ 
+            and $ x \leq k $, the modular law yields $ k = x \vee ( k \wedge w ) $.
+    \end{enumerate}
+\end{ispat}
 
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+%                                                 Theorem 2.17
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
+\begin{teorem}
+    %FIXME BEGIN
+    Let $ a, b \in L $ and $ a \oplus b = 1 $. For $ x,s \in a/0 $, if $ x \beta_* s $ in $ L $ then $ x \beta_* s $ in $ a/0 $.
+    %FIXME END
+\end{teorem}
+
+\begin{ispat}
+    Let $ k \in L $ such that $ x \vee k = a $. Then $ (x \vee k ) \oplus b = 1 $, and so $ x \vee ( k \vee b ) = 1 $. 
+    Hence $ s \vee ( k \vee b ) = 1 $ since $ x \beta_* s $. Then $ \left[ (s \vee k ) \vee b \right] \wedge a = a $, 
+    it follows that $ ( x \vee k ) \vee ( b \wedge a ) = a $. We obtain that $ s \vee k = a $. Similarly, interchanging 
+    roles of $ x $ and $ s $, we can show that $ x \vee t = a $ for any element $ t $ of $ L $ such that $ s \vee t = a $. 
+    Therefore $ x \beta_* s \in a/0 $.
+\end{ispat}
+
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+%                                                 Theorem 2.18
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+\begin{teorem}
+    Let $ x,y,k \in L $ such that $ x \vee k = y \vee k = 1 $, $ k \wedge y \leq k \wedge x $ and $ x \vee y \ll 1/y $. 
+    Then $ x \vee y \leq 1/x $.
+\end{teorem}
+
+\begin{ispat}
+    Let $ t \in 1/x $ such that $ ( x \vee y ) \vee t = 1 $. Since $ x \vee k = 1 $, $ t \wedge ( x \vee k ) = t \wedge 1 $, 
+    and so the modular law yields that $ x \vee ( t \wedge k ) = t $. Hence $ x \vee y \vee ( t \wedge k ) = 1 $. 
+    It follows that $ x \vee y \vee \left[ y \vee ( t \wedge k ) \right] = 1 $. Since $ x \vee y \ll 1/x $, 
+    $ y \vee ( t \wedge k ) = 1 $. In a similar way we can show that $ t \vee ( k \wedge y ) = 1 $. 
+    Since $ k \wedge y \leq k \wedge x $, $ t = t \vee ( k \wedge x ) = 1 $. Therefore $ x \vee y \ll 1/x $.
+\end{ispat}
 
 
   
