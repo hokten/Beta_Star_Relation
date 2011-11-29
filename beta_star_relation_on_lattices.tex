@@ -78,12 +78,15 @@ Throughout this paper L denotes a lattice.
 
 \begin{teorem} \label{3}
   Let $ a,b $ be elements of $ L $. 
-  \begin{enumerate}
+  \begin{enumerate}[label=(\roman{*}), ref=(\roman{*})]
+
+      \item
+          $ a \beta_* b $ if and only if $ a \vee c = 1 $ and $ b \vee c = 1 $ for each $ c \in L $ 
+      such that $ a \vee b  \vee c = 1 $.  \label{3.1}
+
     \item
-      $ a \beta_* b $ if and only if $ a \vee c = 1 $ and $ b \vee c = 1 $ for each $ c \in L $ 
-      such that $ a \vee b  \vee c = 1 $.
-    \item
-      $ a \beta_* b $ if and only if $ a \vee b \ll 1/a $ and $ a \vee b \ll 1/b $
+      $ a \beta_* b $ if and only if $ a \vee b \ll 1/a $ and $ a \vee b \ll 1/b $  \label{3.2}
+
   \end{enumerate}
 \end{teorem}
 
@@ -356,7 +359,7 @@ Throughout this paper L denotes a lattice.
 %                                                 Theorem 2.17
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
-\begin{teorem}
+\begin{teorem}\label{15}
     %FIXME BEGIN
     Let $ a, b \in L $ and $ a \oplus b = 1 $. For $ x,s \in a/0 $, if $ x \beta_* s $ in $ L $ then $ x \beta_* s $ in $ a/0 $.
     %FIXME END
@@ -374,7 +377,7 @@ Throughout this paper L denotes a lattice.
 %                                                 Theorem 2.18
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
-\begin{teorem}
+\begin{teorem}\label{16}
     Let $ x,y,k \in L $ such that $ x \vee k = y \vee k = 1 $, $ k \wedge y \leq k \wedge x $ and $ x \vee y \ll 1/y $. 
     Then $ x \vee y \leq 1/x $.
 \end{teorem}
@@ -386,8 +389,38 @@ Throughout this paper L denotes a lattice.
     $ y \vee ( t \wedge k ) = 1 $. In a similar way we can show that $ t \vee ( k \wedge y ) = 1 $. 
     Since $ k \wedge y \leq k \wedge x $, $ t = t \vee ( k \wedge x ) = 1 $. Therefore $ x \vee y \ll 1/x $.
 \end{ispat}
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+%                                                 Theorem 2.19
+%00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+\begin{teorem}\label{17}
+    Let $x,y,a,b \in L $. If $ a,b \ll L, x \leq y \vee b $ and $ y \leq x \vee a $ then $ x \beta_* y $.
+\end{teorem}
+
+\begin{ispat}
+    Let $ k \in L $ such that $ x \vee y \vee k = 1 $. Since $ x \leq y \vee b $, $ y \vee b \vee k = 1 $. 
+    From $ b \ll L $ we have $ ya \vee k = 1 $. In a similar way we can show that $ x \vee k = 1 $. 
+    Hence, by the Theorem \ref{3} \ref{3.1}, $ x \beta_* y $.
+\end{ispat}
 
 
+\begin{teorem}\label{18}
+    Let $ x_1,x_2,y_1,y_2 \in L $. If $ x_1 \beta_* x_2 $ and $ y_1 \beta_* y_2 $ then $ ( x_1 \vee x_2 ) \beta_* ( y_1 \vee y_2 ) $.
+\end{teorem}
+
+\begin{ispat}
+    Let $ k \in L $ such that $ (x_1 \vee x_2 ) \vee (y_1 \vee y_2 ) \vee k = 1 $. Since $ x_1 \beta_* y_1 $, 
+    $ y_1 \vee x_2 \vee y_2 \vee k = 1 $ and $ x_1 \vee x_2 \vee y_2 \vee k = 1 $. Since 
+    $ x_2 \beta_* y_2 $, $ y_1 \vee y_2 \vee k = 1 $ and $ x_1 \vee x_2 \vee k = 1 $. 
+    By the Theorem \ref{3} \ref{3.1}, $ ( x_1 \vee x_2 ) \beta_* ( y_1 \vee y_2 ) $.
+\end{ispat}
+
+
+\begin{sonuc}
+    Let $ x, y_1, y_2,...,y_n \in L $. 
+    %FIXME 
+    $ x \beta_* y_i $ then $ \displaystyle x \beta_* \bigvee_{i=1}^n y_i $.
+\end{sonuc}
   
 
 
