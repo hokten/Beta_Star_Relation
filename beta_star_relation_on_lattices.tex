@@ -416,11 +416,47 @@ Throughout this paper L denotes a lattice.
 \end{ispat}
 
 
-\begin{sonuc}
-    Let $ x, y_1, y_2,...,y_n \in L $. 
-    %FIXME 
+\begin{sonuc}\label{19}
+    Let $ x, y_1, y_2,...,y_n \in L $. If $ x \beta_* y_i $ for $ i=1,2,...,n $ then  
     $ x \beta_* y_i $ then $ \displaystyle x \beta_* \bigvee_{i=1}^n y_i $.
 \end{sonuc}
+
+\begin{teorem}\label{20}
+    Let $ x,y \in L $ and $ j \ll L $. Then $ x \beta_* $ if and only if $ x \beta_* ( y \vee j ) $.
+\end{teorem}
+
+\begin{ispat}
+\end{ispat}
+
+\begin{teorem}\label{21}
+    Let $ Rad(L)=0 $ and $ a \oplus b = 1 $. If $ x \beta_* a $ for some $ x \in L $ then $ x \oplus b = 1 $. 
+\end{teorem}
+\begin{ispat}
+    Since $ a \oplus b = 1 $, $ b $ is a supplement of $ a $. Since $ x \beta_* a $, it follows from 
+    Theorem \ref{8} \ref{8.1} that $ b $ is also a supplement of $ x $. Therefore $ b \vee x = 1 $ and 
+    $ b \wedge x \ll x/0 $. Since $ Rad(L)=0 $, $ x \wedge b \leq Rad(L) = 0 $ from 
+    %FIXME
+    Lemma. 
+    %FIXME
+    Hence $ x \oplus b = 1 $
+\end{ispat}
+
+\begin{teorem}
+    $ L $ is weak supplemented if and only if for every $ x \in L $, $ x $ is equilavent to a weak supplement in $ L $.
+\end{teorem}
+
+\begin{ispat}
+    $ ( \Rightarrow ) $ 
+    Let $ x \in L $. Since $ L $ is a weak supplemented, there exists $ z \in L $ such that 
+    $ x \vee z = 1 $ and $ x \wedge z \ll L $. Here, $ x $ is a weak supplement element in $ L $. 
+    Since $ \beta_* $ relation is reflexive, $ x \beta_* x $. Hence every element of $ L $ is 
+    equilavent to a weak supplement element in $ L $. \\
+    $ ( \Leftarrow ) $
+    Let $ x \in L $. By the hypothesis, there exists a weak supplement $ z \in L $ such that 
+    $ x \beta_* z $. Let $ z $ is a weak supplement of $ a $. Thus $ a \vee z = 1 $ and $ a \wedge z \ll L $. 
+    Here, $ a $ is also a weak supplement element of $ z $ in $ L $. Since $ x \beta_* z $, 
+    it follows from Theorem \ref{8} \ref{8.2} that $ a $ is also weak supplement of $ x $.  
+\end{ispat}
   
 
 
