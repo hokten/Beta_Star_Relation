@@ -117,16 +117,16 @@
 \maketitle
 \thispagestyle{empty}
 \begin{abstract}
-  In this paper, we generalize $ \beta_* $ relation on submodules of a module to elements of a complete modular lattice. Let $ L $ is 
-  a complete modular lattice. We say $ a,b \in L $ are $ \beta_* \ equilavent $, $ a \beta_* b $, if and only if 
+  In this paper, we generalize $ \beta^* $ relation on submodules of a module to elements of a complete modular lattice. Let $ L $ is 
+  a complete modular lattice. We say $ a,b \in L $ are $ \beta_* \ equivalent $, $ a \beta_* b $, if and only if 
   for each $ t \in L $ such that $ a \vee t = 1 $ then $ b \vee t = 1 $ and for each $ k \in L $ such that $ b \vee k = 1 $ then $ a \vee k = 1 $. 
   We show that the $ \beta_* $ relation is an equivalence relation. Then, we examine $ \beta_* $ relation on weak supplemented lattices. 
-  Finally, we show that $ L $ is weak supplemented if and only if for every $ x \in L $, $ x $ is equilavent to a weak supplement in $ L $. 
+  Finally, we show that $ L $ is weak supplemented if and only if for every $ x \in L $, $ x $ is equivalent to a weak supplement in $ L $. 
   \quad \\
   \quad \\
 
   \Sinif{06C05, 16D10} \\
-  \Keywords{$ \beta_* $-relation, weak supplement, weakly supplemented lattice, complemented lattice, amply supplemented lattice, hollow lattice.
+  \Keywords{$ \beta_* $-relation, weakly supplemented lattice, complemented lattice, amply supplemented lattice, hollow lattice.
   }
 \end{abstract}
 
@@ -141,18 +141,19 @@
 %hokten@gmail.com,nozkan@omu.edu.tr, cnebiyev@omu.edu.tr
 %}
 \section{Introduction}
-Throughout this paper, L denotes a complete modular lattice with smallest element 0 and greatest element 1. A lattice we will mean a complete modular lattice. In a lattice $ L $, an element $ a $ of $ L $ 
-called $ small $ in $ L $, if $ a \vee b \neq 1 $ holds for every $ b \neq 1 $. This is denoted by $ a \ll L $. An element $ c $ of $ L $ is called a $ supplement $ of $ b $ in L 
+Throughout this paper, $ L $ denotes a complete modular lattice with smallest element 0 and 
+greatest element 1. A lattice we will mean a complete modular lattice. In a lattice $ L $, an element $ m \in L $ is called $ maximal $ in $ L $ if there is no element between $ m $ and $ 1 $. An element $ a $ of $ L $ 
+called $ small $ in $ L $, if $ a \vee b \neq 1 $ holds for every $ b \neq 1 $. This is denoted by $ a \ll L $. An element $ c $ of $ L $ is called a $ supplement $ of $ b $ in $ L $ 
 if it is minimal relative to the property $ b \vee c = 1 $. Equivalently, an element $ c $ is a supplement of $ b $ in $ L $ if and only if $ b \vee c = 1 $ and 
-$ b \wedge c \ll c/0 $. An element $ c $ of $ L $ is called a $ weak \ supplement $ of $ b $ in L if $ b \vee c = 1 $ and $ b \wedge c \ll L $. A lattice $ L $ is called 
+$ b \wedge c \ll c/0 $. An element $ c $ of $ L $ is called a $ weak \ supplement $ of $ b $ in $ L $ if $ b \vee c = 1 $ and $ b \wedge c \ll L $. A lattice $ L $ is called 
 $ supplemented $ (respectively, $ weakly \ supplemented $) if each element of $ L $ has a supplement (respectively, weak supplement) in $ L $.
 For $ a \in L $, we said that $ b \in L $ $ complement $ of $ a $ if $ a \wedge b = 0 $ and $ a \vee b = 1 $ (see \cite{davey}). It is denoted by $ a \oplus b = 1 $ (see \cite{calugeranu}). 
-A lattice $ L $ is called $ complemented $ if each element in $ L $ has at least one complemented (see \cite{calugeranu}). A lattice $ L $ is called $ hollow $ if every non-zero element 
-small in $ L $. An element $ a $ of $ L $ has $ ample \  supplements $ in $ L $ if for every $ t \in L $ with  $ a \vee t = 1 $, there is a supplement $ t^{'} $ of $ a $ with $ t^{'} \leq t $. 
+A lattice $ L $ is called $ complemented $ if each element in $ L $ has at least one complemented (see \cite{calugeranu}). A lattice $ L $ is called $ hollow $ if every element with distinct from 
+1 small in $ L $. An element $ a $ of $ L $ has $ ample \  supplements $ in $ L $ if for every $ t \in L $ with  $ a \vee t = 1 $, there is a supplement $ t^{'} $ of $ a $ with $ t^{'} \leq t $. 
 $ L $ is called $ amply \ supplemented $ if all elements of $ L $ have ample supplements in $ L $. 
 In a lattice $ L $, the meet of all maximal (except from 1) elements in $ L $ is called $ radical $ of $ L $, denoted $rad(L) $.  
 If $ a \in L $ such that $ a \ll L $ then $ a \leq rad(L) $ (see \mycite{stenstrom}{Proposition 6}). 
-For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ for any element $ t $ of $ L $ such that $ b \vee t = 1 $, $ a \vee t = 1 $
+For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ if $ b \ll 1/a $.
 \section{$ \beta_* $ Relation}
 \begin{definition} \label{1}
   Let $ a,b $ elements of $ L $. We define a relation $ \beta_* $ on the elements of $ L $ by 
@@ -167,7 +168,7 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
 \begin{proof}
   The reflexive and symmetric properties are clear. For transitivity, assume $ a \beta_*b $ and $ b \beta_* c $. 
   $ t \in L $ such that $ a \vee t = 1 $. Since $ a \beta_*b $, $ b \vee t = 1 $. So,  by $ b \beta_* c $, 
-  $ c \vee t = 1 $. Similarly, for each $ k \in L $ such that $ a \vee k = 1 $ then $ a \vee k=1 $. 
+  $ c \vee t = 1 $. Similarly, for each $ k \in L $ such that $ c \vee k = 1 $ then $ a \vee k=1 $. 
   Finally $ a \beta_* c $.
 
 \end{proof}
@@ -195,13 +196,13 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
       $ a \beta_* b $, $ b \vee ( b \vee c ) = 1 $. Hence $ b \vee c = 1 $. Similarly, $ a \vee c = 1 $. \\
       $( \Leftarrow )$
       $ t \in L $ such that $ a \vee t = 1 $. 
-      Hence $ a \vee b \vee t = 1 $. By the hypothesis $ b \vee t = 1 $. 
+      Then $ a \vee b \vee t = 1 $. By the hypothesis $ b \vee t = 1 $. 
       Similarly, if $ k \in L $ with $ b \vee k = 1 $ then $ a \vee k = 1 $. So $ a \beta_* b $.
     \item
       $ ( \Rightarrow ) $
       Let $ a \beta_* b $ and $ t \in 1/a $ such that $ a \vee b \vee t = 1 $. 
-      Hence $ ( a \vee t ) \vee b = 1 $. Since $ a \beta_* b $, $ a \vee t = 1 $. 
-      Hence $ t=1 $. Therefore $ a \vee b \ll 1/a $. Similarly, $ a \vee b \ll 1/b $. \\
+      Then $ ( a \vee t ) \vee b = 1 $. Since $ a \beta_* b $, $ a \vee t = 1 $. 
+      Then $ t=1 $. Therefore $ a \vee b \ll 1/a $. Similarly, $ a \vee b \ll 1/b $. \\
       $( \Leftarrow )$
       Let $ a \vee b \ll 1/a $ , $ a \vee b \ll 1/b $ and $ t \in L $ such that $ a \vee t = 1 $. 
       So $ ( a \vee b ) \vee ( b \vee t ) = a \vee b \vee t = 1 $. Since $ a \vee b \ll 1/b $ and 
@@ -212,11 +213,12 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
 
 \begin{theorem} \label{4}
   Let $ a,b $ be elements of $ L $. Then,
-  \begin{enumerate}
+  \begin{enumerate}[label=(\roman{*}), ref=(\roman{*})]
+
     \item
       If $ a \ll L $ and $ a \beta_* b $ then $ b \ll L $.
-    \item
-      All small elements in $ L $ is equilavent with $ \beta_* $ equivalence relation.
+    \item \label{4.2}
+      All small elements in $ L $ is equivalent with $ \beta_* $ equivalence relation.
   \end{enumerate}
 \end{theorem}
 
@@ -234,11 +236,12 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
 \end{proof}
 
 \begin{corollary} \label{5}
-  $ L $ is hollow if and only if all small elements (except from $ 1 $) in $ L $ are equivalent with $ \beta_* $ relation. 
+  $ L $ is hollow if and only if all elements with distinct from $ 1 $ in $ L $ are equivalent with $ \beta_* $ relation. 
 \end{corollary}
 \begin{proof}
   $ ( \Rightarrow ) $
-  Let $ L $ be hollow. Then all elements of $ L $ are small in $ L $. Clear from Theorem \ref{4}. \\
+  Let $ L $ be hollow. Then all elements of $ L $ with distinct from $ 1 $ are small in $ L $. Then by Theorem \ref{4} \ref{4.2}, 
+  all elements with distinct from $ 1 $ in $ L $ are equivalent with $ \beta_* $ relation. \\
   $ ( \Leftarrow ) $ 
   Let all elements of $ L $ be equivalent to each other. Let us take any element $ t $ in $ L $ 
   such that $ a \vee t = 1 $. By the hypothesis, $ a \beta_* t $. Hence $ t = t \vee t = 1 $. 
@@ -249,9 +252,9 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
   If $ b $ lies above $ a $ then, $ a \beta_* b $. 
 \end{theorem}
 \begin{proof}
-  Assume $ a $ lies above $ b $. Then, for any $ t \in L $ such that $ b \vee t = 1 $, 
-  $ a \vee t = 1 $. Conversely, let $ k \in L $ with $ a \vee k = 1 $  
-  Since $ a \leq b $, $ a \vee b \vee k = 1 $. Therefore $ b \vee k = 1 $ and so $ a \beta_* b $.
+  Assume $ b $ lies above $ a $. Then, $ b < 1/a $. Since $ a \leq b $ for any $ t \in L $ such that $ a \vee t = 1 $, $ b \vee t = 1 $. 
+  Conversely, let $ k \in L $ with $ b \vee k = 1 $. Then $ b \vee a \vee k = 1 $. Since $ b \leq 1/a $ and $ a \vee k \in 1/a $, $ a \vee k = 1 $. Hence $ a \beta_* b $.
+
 
 \end{proof}
 \begin{lemma}\label{7}
@@ -259,6 +262,11 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
   If $ a \vee b = 1 $ and $ ( a \wedge b ) \vee c =1 $
   then $ a \vee(b \wedge c)=b \vee ( a \wedge c ) = 1 $.
 \end{lemma}
+\begin{proof}
+  Assume $ a \vee b = 1 $ and $ ( a \wedge b ) \vee c = 1 $. Since $ ( a \wedge b ) \vee c = 1 $, $ a = a \wedge 1 = a \wedge \left[ ( a\wedge b ) \vee c \right]= ( a \wedge b ) \vee ( a \wedge c ) $. Then $ 1 = a\vee b $, 
+  $ ( a \wedge b ) \vee ( a \wedge c ) \vee b = b \vee ( a \wedge c )$. Similarly $ a \vee ( b \wedge c ) = 1 $.
+\end{proof}
+
 
 \begin{theorem}\label{8}
   Let $ a,b \in L $. If $ a\beta_* b $ then the following conditions hold.
@@ -275,13 +283,14 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
       Let $ c $ be a supplement of $ a $. Then $ a \vee c = 1 $. Since $ a \beta_* b $, $ b \vee c=1 $.
       Let $ d \in L $ such that $ d \leq c $ and $ b \vee d = 1 $. Therefore 
       $ a \vee d = 1 $. Since $ c $ is a supplement of $ a $ and $ d \leq c $, $ d = c $. Then 
-      $ c $ is also a supplement of $ b $. Similarly, interchanging the roles of $ a $ and $ b $ 
+      $ c $ is a supplement of $ b $. Similarly, interchanging the roles of $ a $ and $ b $ 
       we can show that each supplement of $ b $ is also a supplement of $ a $.
     \item
       Let $ a \beta_* b $ and $ c $ be a weak supplement of $ a $ in $ L $. Therefore $ a \vee c = 1 $ 
       and $ a \wedge c \ll L $. Since $ a \beta_* b $ and $ a \vee c = 1 $, $ b \vee c = 1 $. 
       Let $ t $ be an element of $ L $ such that $ (b \wedge c ) \vee t = 1 $ . By Lemma \ref{7}, 
-      $ t = 1 $. Therefore $ b \wedge c \ll L $ and so $ c $ is also a weak supplement of $ b $. 
+      $ b \vee ( c \wedge t )=1 $ and since $ a \beta_* b $, $ a \vee ( c \wedge t ) = 1 $. Then by also Lemma \ref{7}, $ ( a \wedge c ) \vee t = 1 $ and since $ a \wedge c \ll L $, $ t = 1 $.
+      Therefore $ b \wedge c \ll L $ and so $ c $ is also a weak supplement of $ b $. 
       Similarly, interchanging the roles of $ a $ and $ b $ show that each supplement of $ b $ 
       is also a supplement of $ a $.
   \end{enumerate}
@@ -295,12 +304,12 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
 
 \begin{theorem}\label{9}
   Let $ L $ be a amply supplemented lattice and $ a,b \in L $. If supplements of $ a $ and $ b $ in $ L $ 
-  are same then $ a \beta_* b $.
+  are the same then $ a \beta_* b $.
 \end{theorem}
 
 \begin{proof}
   Let $ t \in L $ such that $ a \vee t = 1 $. Since $ L $ is amply supplemented, there exists 
-  a supplement of $ a $ in $ L $ such that $ r \leq t $ and $ a \vee r = 1 $. By the hypothesis, 
+  a supplement of $ a $ in $ L $ such that $ r \leq t $. By the hypothesis, 
   $ r $ is also a supplement of $ b $. Then $ b \vee r = 1 $. Since $ r \leq t $, $ b \vee t = 1 $. 
   Similarly, interchanging the roles of $ a $ and $ b $ we can show that $ a \vee k = 1 $ for any 
   element $ k $ of $ L $ such that $ b \vee k = 1 $. Therefore $ a \beta_* b $.
@@ -319,7 +328,7 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
   Clear from Theorem \ref{8} \ref{8.2}. \\
   $ ( \Leftarrow ) $:  
   Since $ x \leq y $, for any element $ t $ of $ L $ such that $ x \vee t = 1 $, $ y \vee t = 1 $. 
-  Let $ k \in L $ such that $ y \vee k = 1 $. Since $ c $ is weak supplement of $ x $ in L, 
+  Let $ k \in L $ such that $ y \vee k = 1 $. Since $ c $ is weak supplement of $ x $ in $ L $, 
   $ x \vee c = 1 $ and $ x \wedge c \ll L $. Therefore $ y \wedge ( x \vee c ) = 1 \wedge y $, and so 
   $ y = x \vee ( y \wedge c ) $. Hence $ k \vee x \vee ( y \wedge c ) = 1 $. Since $ y \wedge c \ll L $, 
   $ x \vee k = 1 $. Thus $ x \beta_* y $.
@@ -411,7 +420,7 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
   Let $ x \in L $ and $ k $ be a maximal (except from $ 1 $ ) element of $ L $.
   \begin{enumerate}[label=(\roman{*}), ref=(\roman{*})]
     \item
-      If $ a, b \in L $ such that $ a \vee b = 1 $, $ a \neq 1 $ and $ x \beta_* a $ then $ x \not\leq b $. \label{14.1}
+      If $ a, b \in L $ such that $ a \vee b = 1 $, $ b \neq 1 $ and $ x \beta_* a $ then $ x \not\leq b $. \label{14.1}
       \label{14.1}
     \item
       If $ x \beta_*y $ and $ x \leq k $ then $ y \leq k $. \label{14.2}
@@ -428,7 +437,7 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
     \item
       Assume that $ x \leq b $. Then $ a \vee b \vee x = 1 $. Since $ x \beta_* a $, $ x \vee b = 1 $ so $ b = 1 $. 
             %FIXME BEGIN
-      This is a contradiction with $ b $ is different from $ 1 $. 
+      This is a contradiction with $ b $ is distinct from $ 1 $. 
             %FIXME END
       Therefore $ x \not\le b $.
     \item
@@ -469,15 +478,15 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
 
 \begin{theorem}\label{16}
   Let $ x,y,k \in L $ such that $ x \vee k = y \vee k = 1 $, $ k \wedge y \leq k \wedge x $ and $ x \vee y \ll 1/y $. 
-  Then $ x \vee y \leq 1/x $.
+  Then $ x \vee y \ll 1/x $.
 \end{theorem}
 
 \begin{proof}
   Let $ t \in 1/x $ such that $ ( x \vee y ) \vee t = 1 $. Since $ x \vee k = 1 $, $ t \wedge ( x \vee k ) = t \wedge 1 $, 
   and so $ x \vee ( t \wedge k ) = t $ by the modular law. Hence $ x \vee y \vee ( t \wedge k ) = 1 $. 
   It follows that $ x \vee y \vee \left[ y \vee ( t \wedge k ) \right] = 1 $. Since $ x \vee y \ll 1/y $, 
-  $ y \vee ( t \wedge k ) = 1 $. Similarly, $ t \vee ( k \wedge y ) = 1 $. 
-  Since $ k \wedge y \leq k \wedge x $, $ t = t \vee ( k \wedge x ) = 1 $. Therefore $ x \vee y \ll 1/x $.
+  $ y \vee ( t \wedge k ) = 1 $. Then by, $ t \vee ( k \wedge y ) = 1 $. 
+  Since $ k \wedge y \leq k \wedge x $, $ 1 = t \vee ( k \wedge y ) = t \vee ( k \wedge x ) =t $. Therefore $ x \vee y \ll 1/x $.
 \end{proof}
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 %                                                 Theorem 2.19
@@ -495,20 +504,19 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
 
 
 \begin{theorem}\label{18}
-  Let $ x_1,x_2,y_1,y_2 \in L $. If $ x_1 \beta_* x_2 $ and $ y_1 \beta_* y_2 $ then $ ( x_1 \vee x_2 ) \beta_* ( y_1 \vee y_2 ) $.
+  Let $ x_1,x_2,y_1,y_2 \in L $. If $ x_1 \beta_* y_1 $ and $ x_2 \beta_* y_2 $ then $ ( x_1 \vee x_2 ) \beta_* ( y_1 \vee y_2 ) $.
 \end{theorem}
 
 \begin{proof}
   Let $ k \in L $ such that $ (x_1 \vee x_2 ) \vee (y_1 \vee y_2 ) \vee k = 1 $. Since $ x_1 \beta_* x_2 $, 
   $ y_1 \vee x_2 \vee y_2 \vee k = 1 $ and $ x_1 \vee x_2 \vee y_2 \vee k = 1 $. Also since 
-  $ y_1 \beta_* y_2 $, $ y_1 \vee y_2 \vee k = 1 $ and $ x_1 \vee x_2 \vee k = 1 $. 
+  $ x_2 \beta_* y_2 $, $ y_1 \vee y_2 \vee k = 1 $ and $ x_1 \vee x_2 \vee k = 1 $. 
   By Theorem \ref{3} \ref{3.1}, $ ( x_1 \vee x_2 ) \beta_* ( y_1 \vee y_2 ) $.
 \end{proof}
 
 
 \begin{corollary}\label{19}
-  Let $ x, y_1, y_2,...,y_n \in L $. If $ x \beta_* y_i $ for $ i=1,2,...,n $ then  
-  $ x \beta_* y_i $ then $ \displaystyle x \beta_* \bigvee_{i=1}^n y_i $.
+  Let $ x, y_1, y_2,...,y_n \in L $. If $ x \beta_* y_i $ for $ i=1,2,...,n $ then $ \displaystyle x \beta_* \bigvee_{i=1}^n y_i $.
 \end{corollary}
 \begin{proof}
   Clear from Theorem \ref{18}.
@@ -540,15 +548,15 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
 \end{proof}
 
 \begin{theorem}
-  $ L $ is weak supplemented if and only if for every $ x \in L $, $ x $ is equilavent to a weak supplement in $ L $.
+  $ L $ is weak supplemented if and only if for every $ x \in L $, $ x $ is equivalent to a weak supplement in $ L $.
 \end{theorem}
 
 \begin{proof}
   $ ( \Rightarrow ) $ 
-  Let $ x \in L $. Since $ L $ is a weak supplemented, there exists $ z \in L $ such that 
+  Let $ x \in L $. Since $ L $ is weak supplemented, there exists $ z \in L $ such that 
   $ x \vee z = 1 $ and $ x \wedge z \ll L $. Also $ x $ is a weak supplement of $ z $ in $ L $. 
   Since $ \beta_* $ relation is reflexive, $ x \beta_* x $. So, every element of $ L $ is 
-  equilavent to a weak supplement element in $ L $. \\
+  equivalent to a weak supplement element in $ L $. \\
   $ ( \Leftarrow ) $
   Let $ x \in L $. By the hypothesis, there exists a weak supplement $ z \in L $ such that 
   $ x \beta_* z $. Let $ z $ is a weak supplement of $ a $. Thus $ a \vee z = 1 $ and $ a \wedge z \ll L $. 
@@ -557,9 +565,9 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
 \end{proof}
 \begin{remark}
   The converse of Theorem \ref{6} is not always true. We can give an example about that. Let $ K $ be a hollow module which is not simple. 
-  $ L $ be the lattice of the set of all submodules of $ KxK $ with respect to the ordering relation of inclusion. 
-  Since $ K $ is not simple, $ K $ has a submodule $ T $ with $ T \neq 0 $ and $ T \ll K $. Clearly we see that $ Tx0 \ll L $ and $ 0xT \ll L $ . 
-  But $ Tx0 $ and $ 0xT $ don't lie above each other.
+  $ L $ be the lattice of the set of all submodules of $ K \times K $ with respect to the ordering relation of inclusion. 
+  Since $ K $ is not simple, $ K $ has a submodule $ T $ with $ T \neq 0 $ and $ T \ll K $. Clearly we see that $ T \times 0 \ll L $ and $ 0 \times T \ll L $ . 
+  But $ T \times 0 $ and $ 0 \times T $ don't lie above each other.
 \end{remark}
 
 
