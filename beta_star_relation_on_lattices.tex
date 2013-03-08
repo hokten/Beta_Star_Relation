@@ -17,7 +17,7 @@
 
 
 %============================ Bas ============================
-\usepackage[maxnames=2,bibstyle=numeric]{biblatex}
+\usepackage[maxnames=7,bibstyle=numeric,backend=bibtex]{biblatex}
 
 %\DeclareNameAlias{default}{first-last/first-last}
 
@@ -39,7 +39,7 @@
 
   @article{nebiyev,
     author = {Birkenmeier, G. F. and Mutlu, F. T. and Nebiyev, C. and Sökmez, N. and Tercan, A.},
-    title   = {Goldie Supplemented Modules},
+    title   = {Goldie*-Supplemented Modules},
     journal = {Glasgow Mathematical Journal},
     year = 2010,
     volume  = {52A},
@@ -55,7 +55,7 @@
     pages = {337-346}
   }
   @article{stenstrom,
-    author = {Stenström, B.},
+    author = {Stenstrm, B.},
     title  = {Radicals and socles of lattices},
     journal = {Arch. Math.},
     volume = {XX},
@@ -66,7 +66,7 @@
   @book{davey,
     author = {Davey, B. A. and Priestley, H. A.},
     title  = {Introduction to Lattices and Order},
-    year	= 2002,
+    year  = 2002,
     location = {London},
     publisher = {Cambridge University Press}
   }
@@ -74,7 +74,7 @@
     author = {C\v{a}lug\v{a}reanu, G.},
     title  = {Lattice Concepts of Module Theory},
     pagetotal = {225},
-    year	= 2000,
+    year  = 2000,
     location = {London},
     publisher = {Kluwer Academic Publisher}
   }
@@ -88,19 +88,19 @@
 \renewcommand{\labelenumi}{(\roman{enumi})}
 \newcommand{\mycite}[2]{\textnormal{\cite{#1},~#2}}
 
-%\hoffset	= 0.96cm
-%\textheight	=614pt
-%\footskip	=-40mm
+%\hoffset  = 0.96cm
+%\textheight  =614pt
+%\footskip  =-40mm
 %\marginparwidth = 0mm
-%\evensidemargin	=0mm
-%\marginparsep	= 0mm
-%\topmargin	=30mm	
-%\oddsidemargin	=-10.mm		
-%\evensidemargin	=0mm		
-%\headheight	=0.mm
-%\headsep	=0.mm
-%\textheight	=220.mm
-%\textwidth	=150.mm
+%\evensidemargin  =0mm
+%\marginparsep  = 0mm
+%\topmargin  =30mm  
+%\oddsidemargin  =-10.mm    
+%\evensidemargin  =0mm    
+%\headheight  =0.mm
+%\headsep  =0.mm
+%\textheight  =220.mm
+%\textwidth  =150.mm
 
 
 
@@ -110,18 +110,19 @@
 \title{$ \beta_* $ RELATION ON LATTICES}
 \author{\begin{tabular}[t]{c}
     Celil NEBİYEV, Hasan Hüseyin ÖKTEN\\ [7mm]
-    Department of Ondokuz Mayıs University, 55139 Samsun, Turkey \\
+    Department of Mathematics, Ondokuz Mayıs University, \\ Kurupelit-Atakum-Samsun, Turkey \\
     cnebiyev@omu.edu.tr, hokten@gmail.com \\
 \end{tabular}}
 \date{}
 \maketitle
 \thispagestyle{empty}
 \begin{abstract}
-  In this paper, we generalize $ \beta^* $ relation on submodules of a module to elements of a complete modular lattice. Let $ L $ is 
+  In this paper, we generalize $ \beta^* $ relation on submodules of a module (see \cite{nebiyev}) to elements of a complete modular lattice. Let $ L $ be 
   a complete modular lattice. We say $ a,b \in L $ are $ \beta_* \ equivalent $, $ a \beta_* b $, if and only if 
-  for each $ t \in L $ such that $ a \vee t = 1 $ then $ b \vee t = 1 $ and for each $ k \in L $ such that $ b \vee k = 1 $ then $ a \vee k = 1 $. 
+  for each $ t \in L $ such that $ a \vee t = 1 $ then $ b \vee t = 1 $ and for each $ k \in L $ such that $ b \vee k = 1 $ then $ a \vee k = 1 $, this is 
+  equivalent to $ a \vee b \ll 1/a $ and $ a \vee b \ll 1/b $. 
   We show that the $ \beta_* $ relation is an equivalence relation. Then, we examine $ \beta_* $ relation on weak supplemented lattices. 
-  Finally, we show that $ L $ is weak supplemented if and only if for every $ x \in L $, $ x $ is equivalent to a weak supplement in $ L $. 
+  Finally, we show that $ L $ is weakly supplemented if and only if for every $ x \in L $, $ x $ is equivalent to a weak supplement in $ L $. 
   \quad \\
   \quad \\
 
@@ -134,7 +135,7 @@
 
 %\title{Aggregation According to Classical Kinetics---From
 %    Nucleation to Coarsening}
-%\author{Hasan Hüseyin ÖKTEN, Celil NEBİYEV, Nurhan Sökmez \\
+%\author{Hasan mez \\
 % \multicolumn{1}{p{.9\textwidth}}{\centering\emph{G. Mill\'an Institute
 %  of Fluid Dynamics, Nanoscience and Industrial Mathematics,
 %  Universidad Carlos III de Madrid, Spain}} \\
@@ -153,10 +154,11 @@ A lattice $ L $ is called $ complemented $ if each element in $ L $ has at least
 $ L $ is called $ amply \ supplemented $ if all elements of $ L $ have ample supplements in $ L $. 
 In a lattice $ L $, the meet of all maximal (except from 1) elements in $ L $ is called $ radical $ of $ L $, denoted $rad(L) $.  
 If $ a \in L $ such that $ a \ll L $ then $ a \leq rad(L) $ (see \mycite{stenstrom}{Proposition 6}). 
-For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ if $ b \ll 1/a $.
+For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ if $ b \ll 1/a $. 
+A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L $, $ a \wedge ( b \vee c ) = ( a \wedge b ) \vee ( a \wedge c) $ holds.
 \section{$ \beta_* $ Relation}
 \begin{definition} \label{1}
-  Let $ a,b $ elements of $ L $. We define a relation $ \beta_* $ on the elements of $ L $ by 
+  Let $ a,b $ be elements of $ L $. We define a relation $ \beta_* $ on the elements of $ L $ by 
   $ a \beta_* b $ if and only if for each $ t \in L $ such that $ a \vee t = 1 $ then $ b \vee t = 1 $ and for each 
   $ k \in L $ such that $ b \vee k = 1 $ then $ a \vee k = 1 $. 
 
@@ -182,7 +184,7 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
       such that $ a \vee b  \vee c = 1 $.  \label{3.1}
 
     \item
-      $ a \beta_* b $ if and only if $ a \vee b \ll 1/a $ and $ a \vee b \ll 1/b $  \label{3.2}
+      $ a \beta_* b $ if and only if $ a \vee b \ll 1/a $ and $ a \vee b \ll 1/b $.  \label{3.2}
 
   \end{enumerate}
 \end{theorem}
@@ -548,12 +550,12 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
 \end{proof}
 
 \begin{theorem}
-  $ L $ is weak supplemented if and only if for every $ x \in L $, $ x $ is equivalent to a weak supplement in $ L $.
+  $ L $ is weakly supplemented if and only if for every $ x \in L $, $ x $ is equivalent to a weak supplement in $ L $.
 \end{theorem}
 
 \begin{proof}
   $ ( \Rightarrow ) $ 
-  Let $ x \in L $. Since $ L $ is weak supplemented, there exists $ z \in L $ such that 
+  Let $ x \in L $. Since $ L $ is weakly supplemented, there exists $ z \in L $ such that 
   $ x \vee z = 1 $ and $ x \wedge z \ll L $. Also $ x $ is a weak supplement of $ z $ in $ L $. 
   Since $ \beta_* $ relation is reflexive, $ x \beta_* x $. So, every element of $ L $ is 
   equivalent to a weak supplement element in $ L $. \\
@@ -576,3 +578,4 @@ For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ 
 \printbibliography[maxnames=99]
 
 \end{document}
+
