@@ -1,135 +1,48 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage[top=3cm,bottom=2cm,left=2cm,right=3cm]{geometry}
-%\usepackage{ucs}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc} 
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{setspace}
-\usepackage{mathptmx}
-\usepackage{titlesec}
+\documentclass[11pt,reqno]{amsart} % please use amsart at 11pt
+\usepackage{amssymb,latexsym}
+\usepackage[draft=true]{hyperref}
+\usepackage{cite} % to get Refs. [1,2,3] typeset as [1--3] automatically
+\usepackage[height=190mm,width=130mm]{geometry} % this is the journal
 \usepackage{enumitem}
+                                % text area size
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
 
 
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
 
-
-
-%============================ Bas ============================
-\usepackage[maxnames=7,bibstyle=numeric,backend=bibtex]{biblatex}
-
-%\DeclareNameAlias{default}{first-last/first-last}
-
-
-
-
-\newcommand{\Keywords}[1]{\par\noindent {\small{\textbf{Keywords}\/}: #1}}
-\newcommand{\Sinif}[1]{\par\noindent {\small{\textbf{AMS Classification Numbers}\/}: #1}}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{definition}[theorem]{Definition}
-
-\usepackage{filecontents}
-\begin{filecontents*}{demo.bib}
-
-
-  @article{nebiyev,
-    author = {Birkenmeier, G. F. and Mutlu, F. T. and Nebiyev, C. and Sökmez, N. and Tercan, A.},
-    title   = {Goldie*-Supplemented Modules},
-    journal = {Glasgow Mathematical Journal},
-    year = 2010,
-    volume  = {52A},
-    pages   = {41--52}
-  }
-  @article{refail,
-    author = {Alizade, R. And Toksoy, E.},
-    title  = {Cofinitely Weak Supplemented Lattices, Indian Journal of Pure},
-    volume = {40:5},
-    edition = {Second},
-    year   = 2009,
-    location = {Cambridge},
-    pages = {337-346}
-  }
-  @article{stenstrom,
-    author = {Stenstrm, B.},
-    title  = {Radicals and socles of lattices},
-    journal = {Arch. Math.},
-    volume = {XX},
-    year   = 1969,
-    location = {Cambridge},
-    pages = {258-261}
-  }
-  @book{davey,
-    author = {Davey, B. A. and Priestley, H. A.},
-    title  = {Introduction to Lattices and Order},
-    year  = 2002,
-    location = {London},
-    publisher = {Cambridge University Press}
-  }
-  @book{calugeranu,
-    author = {C\v{a}lug\v{a}reanu, G.},
-    title  = {Lattice Concepts of Module Theory},
-    pagetotal = {225},
-    year  = 2000,
-    location = {London},
-    publisher = {Kluwer Academic Publisher}
-  }
-\end{filecontents*}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
 
 
 \numberwithin{equation}{section}
-%\usepackage[lflt]{floatflt}
 
-
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\newcommand{\mycite}[2]{\textnormal{\cite{#1},~#2}}
-
-%\hoffset  = 0.96cm
-%\textheight  =614pt
-%\footskip  =-40mm
-%\marginparwidth = 0mm
-%\evensidemargin  =0mm
-%\marginparsep  = 0mm
-%\topmargin  =30mm  
-%\oddsidemargin  =-10.mm    
-%\evensidemargin  =0mm    
-%\headheight  =0.mm
-%\headsep  =0.mm
-%\textheight  =220.mm
-%\textwidth  =150.mm
-
-
-
-\titleformat{\section}{\vspace{.8ex} \bfseries} {\thesection.}{.5em}{}
-\bibliography{demo}
 \begin{document}
-\title{$ \beta_* $ RELATION ON LATTICES}
-\author{\begin{tabular}[t]{c}
-    Celil NEBİYEV, Hasan Hüseyin ÖKTEN\\ [7mm]
-    Department of Mathematics, Ondokuz Mayıs University, \\ Kurupelit-Atakum-Samsun, Turkey \\
-    cnebiyev@omu.edu.tr, hokten@gmail.com \\
-\end{tabular}}
-\date{}
-\maketitle
-\thispagestyle{empty}
+\title[$ \beta_* $ RELATION ON LATTICES]{$ \beta_* $ RELATION ON LATTICES}
+\subjclass[2010]{06C05, 16D10}
+\keywords{$ \beta_* $-relation, weakly supplemented lattice, complemented lattice, amply supplemented lattice, hollow lattice.}
 \begin{abstract}
   In this paper, we generalize $ \beta^* $ relation on submodules of a module (see \cite{nebiyev}) to elements of a complete modular lattice. Let $ L $ be 
   a complete modular lattice. We say $ a,b \in L $ are $ \beta_* \ equivalent $, $ a \beta_* b $, if and only if 
   for each $ t \in L $ such that $ a \vee t = 1 $ then $ b \vee t = 1 $ and for each $ k \in L $ such that $ b \vee k = 1 $ then $ a \vee k = 1 $, this is 
   equivalent to $ a \vee b \ll 1/a $ and $ a \vee b \ll 1/b $. 
-  We show that the $ \beta_* $ relation is an equivalence relation. Then, we examine $ \beta_* $ relation on weak supplemented lattices. 
+  We show that the $ \beta_* $ relation is an equivalence relation. Then, we examine $ \beta_* $ relation on weakly supplemented lattices. 
   Finally, we show that $ L $ is weakly supplemented if and only if for every $ x \in L $, $ x $ is equivalent to a weak supplement in $ L $. 
-  \quad \\
-  \quad \\
-
-  \Sinif{06C05, 16D10} \\
-  \Keywords{$ \beta_* $-relation, weakly supplemented lattice, complemented lattice, amply supplemented lattice, hollow lattice.
-  }
 \end{abstract}
+
+\author{CEL\.{I}L NEB\.{I}YEV}
+\address{Department of Mathematics, Ondokuz Mayis University \\ Kurupelit-Atakum-Samsun, Turkey}
+\email{cnebiyev@omu.edu.tr}
+\author{HASAN H\"{u}SEY\.{I}N \"{O}KTEN
+}
+\address{Technical Sciences Vocational School, Amasya University \\ Amasya, Turkey}
+\email{hokten@gmail.com}
 
 
 
@@ -141,19 +54,20 @@
 %  Universidad Carlos III de Madrid, Spain}} \\
 %hokten@gmail.com,nozkan@omu.edu.tr, cnebiyev@omu.edu.tr
 %}
+\maketitle
 \section{Introduction}
-Throughout this paper, $ L $ denotes a complete modular lattice with smallest element 0 and 
-greatest element 1. A lattice we will mean a complete modular lattice. In a lattice $ L $, an element $ m \in L $ is called $ maximal $ in $ L $ if there is no element between $ m $ and $ 1 $. An element $ a $ of $ L $ 
+Throughout this paper, $ L $ denotes a complete modular lattice with the smallest element 0 and 
+the greatest element 1. A lattice we will mean a complete modular lattice. In a lattice $ L $, an element $1 \neq m \in L $ is called $ maximal $ in $ L $ if there is no element between $ m $ and $ 1 $. An element $ a $ of $ L $ 
 called $ small $ in $ L $, if $ a \vee b \neq 1 $ holds for every $ b \neq 1 $. This is denoted by $ a \ll L $. An element $ c $ of $ L $ is called a $ supplement $ of $ b $ in $ L $ 
 if it is minimal relative to the property $ b \vee c = 1 $. Equivalently, an element $ c $ is a supplement of $ b $ in $ L $ if and only if $ b \vee c = 1 $ and 
 $ b \wedge c \ll c/0 $. An element $ c $ of $ L $ is called a $ weak \ supplement $ of $ b $ in $ L $ if $ b \vee c = 1 $ and $ b \wedge c \ll L $. A lattice $ L $ is called 
 $ supplemented $ (respectively, $ weakly \ supplemented $) if each element of $ L $ has a supplement (respectively, weak supplement) in $ L $.
-For $ a \in L $, we said that $ b \in L $ $ complement $ of $ a $ if $ a \wedge b = 0 $ and $ a \vee b = 1 $ (see \cite{davey}). It is denoted by $ a \oplus b = 1 $ (see \cite{calugeranu}). 
-A lattice $ L $ is called $ complemented $ if each element in $ L $ has at least one complemented (see \cite{calugeranu}). A lattice $ L $ is called $ hollow $ if every element with distinct from 
+For $ a \in L $, we said that $ b \in L $ is a $ complement $ of $ a $ in $ L $ if $ a \wedge b = 0 $ and $ a \vee b = 1 $ (see \cite{davey}). It is denoted by $ a \oplus b = 1 $ (see \cite{calugeranu}). 
+A lattice $ L $ is called $ complemented $ if each element in $ L $ has at least one complement in $ L $ (see \cite{calugeranu}). A lattice $ L $ is called $ hollow $ if every element with distinct from 
 1 small in $ L $. An element $ a $ of $ L $ has $ ample \  supplements $ in $ L $ if for every $ t \in L $ with  $ a \vee t = 1 $, there is a supplement $ t^{'} $ of $ a $ with $ t^{'} \leq t $. 
 $ L $ is called $ amply \ supplemented $ if all elements of $ L $ have ample supplements in $ L $. 
-In a lattice $ L $, the meet of all maximal (except from 1) elements in $ L $ is called $ radical $ of $ L $, denoted $rad(L) $.  
-If $ a \in L $ such that $ a \ll L $ then $ a \leq rad(L) $ (see \mycite{stenstrom}{Proposition 6}). 
+In a lattice $ L $, the meet of all maximal elements in $ L $ is called $ radical $ of $ L $, denoted by $rad(L) $.  
+If $ a \in L $ such that $ a \ll L $ then $ a \leq rad(L) $ (see \cite{stenstrom}, Proposition 6). 
 For $ a,b \in L $ such that $ a \leq b $, we said that $ b \ lies \ above \ a $ if $ b \ll 1/a $. 
 A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L $, $ a \wedge ( b \vee c ) = ( a \wedge b ) \vee ( a \wedge c) $ holds.
 \section{$ \beta_* $ Relation}
@@ -169,7 +83,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 \end{lemma}
 \begin{proof}
   The reflexive and symmetric properties are clear. For transitivity, assume $ a \beta_*b $ and $ b \beta_* c $. 
-  $ t \in L $ such that $ a \vee t = 1 $. Since $ a \beta_*b $, $ b \vee t = 1 $. So,  by $ b \beta_* c $, 
+  Let $ t \in L $ such that $ a \vee t = 1 $. Since $ a \beta_*b $, $ b \vee t = 1 $. So,  by $ b \beta_* c $, 
   $ c \vee t = 1 $. Similarly, for each $ k \in L $ such that $ c \vee k = 1 $ then $ a \vee k=1 $. 
   Finally $ a \beta_* c $.
 
@@ -177,7 +91,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 
 \begin{theorem} \label{3}
   Let $ a,b $ be elements of $ L $. Then,
-  \begin{enumerate}[label=(\roman{*}), ref=(\roman{*})]
+  \begin{enumerate}[label=\textnormal{(\arabic*)}]
 
     \item
       $ a \beta_* b $ if and only if $ a \vee c = 1 $ and $ b \vee c = 1 $ for each $ c \in L $ 
@@ -197,13 +111,12 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
       Let $ a \beta_* b$ and $ c \in L $ such that $ a \vee b \vee c = 1 $. Since $ a \vee ( b \vee c ) = 1 $ and 
       $ a \beta_* b $, $ b \vee ( b \vee c ) = 1 $. Hence $ b \vee c = 1 $. Similarly, $ a \vee c = 1 $. \\
       $( \Leftarrow )$
-      $ t \in L $ such that $ a \vee t = 1 $. 
-      Then $ a \vee b \vee t = 1 $. By the hypothesis $ b \vee t = 1 $. 
+      Let $ t \in L $ such that $ a \vee t = 1 $. 
+      Then $ a \vee b \vee t = 1 $. By hypothesis, $ b \vee t = 1 $. 
       Similarly, if $ k \in L $ with $ b \vee k = 1 $ then $ a \vee k = 1 $. So $ a \beta_* b $.
     \item
       $ ( \Rightarrow ) $
-      Let $ a \beta_* b $ and $ t \in 1/a $ such that $ a \vee b \vee t = 1 $. 
-      Then $ ( a \vee t ) \vee b = 1 $. Since $ a \beta_* b $, $ a \vee t = 1 $. 
+      Let $ a \beta_* b $ and $ t \in 1/a $ such that $ a \vee b \vee t = 1 $. Since $ a \beta_* b $, $ a \vee t = 1 $. 
       Then $ t=1 $. Therefore $ a \vee b \ll 1/a $. Similarly, $ a \vee b \ll 1/b $. \\
       $( \Leftarrow )$
       Let $ a \vee b \ll 1/a $ , $ a \vee b \ll 1/b $ and $ t \in L $ such that $ a \vee t = 1 $. 
@@ -215,7 +128,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 
 \begin{theorem} \label{4}
   Let $ a,b $ be elements of $ L $. Then,
-  \begin{enumerate}[label=(\roman{*}), ref=(\roman{*})]
+  \begin{enumerate}[label=\textnormal{(\arabic*)}]
 
     \item
       If $ a \ll L $ and $ a \beta_* b $ then $ b \ll L $.
@@ -227,7 +140,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 \begin{proof}
   \begin{enumerate}
     \item
-      Let $ a \beta_* b $ , $ a \ll L $ and $ t \in L $ such that $ b \vee t = 1 $. 
+      Let $ a \beta_* b $, $ a \ll L $ and $ t \in L $ such that $ b \vee t = 1 $. 
       Hence $ a \vee t = 1 $. Since $ a \ll L $, $ t = 1 $. Thus $ b \ll L $. 
     \item
       Let $ a \ll L $ and $ b \ll L $ for $ a,b \in L $. Since $ a \ll L $, if $ a \vee t = 1 $ 
@@ -245,38 +158,38 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
   Let $ L $ be hollow. Then all elements of $ L $ with distinct from $ 1 $ are small in $ L $. Then by Theorem \ref{4} \ref{4.2}, 
   all elements with distinct from $ 1 $ in $ L $ are equivalent with $ \beta_* $ relation. \\
   $ ( \Leftarrow ) $ 
-  Let all elements of $ L $ be equivalent to each other. Let us take any element $ t $ in $ L $ 
-  such that $ a \vee t = 1 $. By the hypothesis, $ a \beta_* t $. Hence $ t = t \vee t = 1 $. 
-  Therefore $ a \ll L $ and so $ L $ is hollow. 
+  Let all elements of $ L $ with distinct from $ 1 $ be equivalent to each other. Let $a,t \in L $, $ a \neq 1 $ and $ a \vee t = 1 $. 
+  If $ t \neq 1 $, then by hyphothesis $ a \beta_* t $ and $ t = t \vee t = 1 $. This is a contradiction. Hence $ t = 1 $ and
+  $ a \ll L $.
+  Therefore $ L $ is hollow. 
 \end{proof}
 \begin{theorem}\label{6}
   Let $ a,b $ be elements of $ L $ such that $ a \leq b $. 
-  If $ b $ lies above $ a $ then, $ a \beta_* b $. 
+  If $ b $ lies above $ a $, then $ a \beta_* b $. 
 \end{theorem}
 \begin{proof}
-  Assume $ b $ lies above $ a $. Then, $ b < 1/a $. Since $ a \leq b $ for any $ t \in L $ such that $ a \vee t = 1 $, $ b \vee t = 1 $. 
-  Conversely, let $ k \in L $ with $ b \vee k = 1 $. Then $ b \vee a \vee k = 1 $. Since $ b \leq 1/a $ and $ a \vee k \in 1/a $, $ a \vee k = 1 $. Hence $ a \beta_* b $.
+  Assume $ b $ lies above $ a $. Then, $ b \ll 1/a $. Since $ a \leq b $ for any $ t \in L $ such that $ a \vee t = 1 $, $ b \vee t = 1 $. 
+  Conversely, let $ k \in L $ with $ b \vee k = 1 $. Then $ b \vee a \vee k = 1 $. Since $ b \ll 1/a $ and $ a \vee k \in 1/a $, $ a \vee k = 1 $. Hence $ a \beta_* b $.
 
 
 \end{proof}
 \begin{lemma}\label{7}
   Let $ a,b,c $ be elements of $ L $.
-  If $ a \vee b = 1 $ and $ ( a \wedge b ) \vee c =1 $
+  If $ a \vee b = 1 $ and $ ( a \wedge b ) \vee c =1 $,
   then $ a \vee(b \wedge c)=b \vee ( a \wedge c ) = 1 $.
 \end{lemma}
 \begin{proof}
-  Assume $ a \vee b = 1 $ and $ ( a \wedge b ) \vee c = 1 $. Since $ ( a \wedge b ) \vee c = 1 $, $ a = a \wedge 1 = a \wedge \left[ ( a\wedge b ) \vee c \right]= ( a \wedge b ) \vee ( a \wedge c ) $. Then $ 1 = a\vee b $, 
-  $ ( a \wedge b ) \vee ( a \wedge c ) \vee b = b \vee ( a \wedge c )$. Similarly $ a \vee ( b \wedge c ) = 1 $.
+  Assume $ a \vee b = 1 $ and $ ( a \wedge b ) \vee c = 1 $. Since $ ( a \wedge b ) \vee c = 1 $, $ a = a \wedge 1 = a \wedge \left[ ( a\wedge b ) \vee c \right]= ( a \wedge b ) \vee ( a \wedge c ) $. Then $ 1 = a\vee b = ( a \wedge b ) \vee ( a \wedge c ) \vee b = b \vee ( a \wedge c )$. Similarly $ a \vee ( b \wedge c ) = 1 $.
 \end{proof}
 
 
 \begin{theorem}\label{8}
   Let $ a,b \in L $. If $ a\beta_* b $ then the following conditions hold.
-  \begin{enumerate}[label=(\roman{*}), ref=(\roman{*})]
+  \begin{enumerate}[label=\textnormal{(\arabic*)}]
     \item
-      If there are exists supplements of $ a $ and $ b $ then these are same. \label{8.1}
+      If there exist supplements of $ a $ and $ b $ then these are the same. \label{8.1}
     \item
-      If there are exists weak supplements of $ a $ and $ b $ then these are same. \label{8.2}
+      If there exist weak supplements of $ a $ and $ b $ then these are the same. \label{8.2}
   \end{enumerate}
 \end{theorem}
 \begin{proof}
@@ -290,11 +203,11 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
     \item
       Let $ a \beta_* b $ and $ c $ be a weak supplement of $ a $ in $ L $. Therefore $ a \vee c = 1 $ 
       and $ a \wedge c \ll L $. Since $ a \beta_* b $ and $ a \vee c = 1 $, $ b \vee c = 1 $. 
-      Let $ t $ be an element of $ L $ such that $ (b \wedge c ) \vee t = 1 $ . By Lemma \ref{7}, 
+      Let $ t $ be an element of $ L $ such that $ (b \wedge c ) \vee t = 1 $. By Lemma \ref{7}, 
       $ b \vee ( c \wedge t )=1 $ and since $ a \beta_* b $, $ a \vee ( c \wedge t ) = 1 $. Then by also Lemma \ref{7}, $ ( a \wedge c ) \vee t = 1 $ and since $ a \wedge c \ll L $, $ t = 1 $.
       Therefore $ b \wedge c \ll L $ and so $ c $ is also a weak supplement of $ b $. 
-      Similarly, interchanging the roles of $ a $ and $ b $ show that each supplement of $ b $ 
-      is also a supplement of $ a $.
+      Similarly, interchanging the roles of $ a $ and $ b $ we can show that each weak supplement of $ b $ 
+      is also a weak supplement of $ a $.
   \end{enumerate}
 \end{proof}
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -305,13 +218,13 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 
 
 \begin{theorem}\label{9}
-  Let $ L $ be a amply supplemented lattice and $ a,b \in L $. If supplements of $ a $ and $ b $ in $ L $ 
+  Let $ L $ be an amply supplemented lattice and $ a,b \in L $. If supplements of $ a $ and $ b $ in $ L $ 
   are the same then $ a \beta_* b $.
 \end{theorem}
 
 \begin{proof}
   Let $ t \in L $ such that $ a \vee t = 1 $. Since $ L $ is amply supplemented, there exists 
-  a supplement of $ a $ in $ L $ such that $ r \leq t $. By the hypothesis, 
+  a supplement $ r $ of $ a $ in $ L $ such that $ r \leq t $. By the hypothesis, 
   $ r $ is also a supplement of $ b $. Then $ b \vee r = 1 $. Since $ r \leq t $, $ b \vee t = 1 $. 
   Similarly, interchanging the roles of $ a $ and $ b $ we can show that $ a \vee k = 1 $ for any 
   element $ k $ of $ L $ such that $ b \vee k = 1 $. Therefore $ a \beta_* b $.
@@ -332,7 +245,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
   Since $ x \leq y $, for any element $ t $ of $ L $ such that $ x \vee t = 1 $, $ y \vee t = 1 $. 
   Let $ k \in L $ such that $ y \vee k = 1 $. Since $ c $ is weak supplement of $ x $ in $ L $, 
   $ x \vee c = 1 $ and $ x \wedge c \ll L $. Therefore $ y \wedge ( x \vee c ) = 1 \wedge y $, and so 
-  $ y = x \vee ( y \wedge c ) $. Hence $ k \vee x \vee ( y \wedge c ) = 1 $. Since $ y \wedge c \ll L $, 
+  $ y = x \vee ( y \wedge c ) $. Hence $ x \vee ( y \wedge c ) \vee k = 1 $. Since $ y \wedge c \ll L $, 
   $ x \vee k = 1 $. Thus $ x \beta_* y $.
 \end{proof}
 
@@ -342,11 +255,11 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 
 \begin{theorem}\label{11}
   Let $ x,y,z,a,b \in L $ such that $ a \oplus b = 1 $ and $ y $ is a supplement of $ x $ in $ L $. Then
-  \begin{enumerate}[label=(\roman{*}), ref=(\roman{*})]
+  \begin{enumerate}[label=\textnormal{(\arabic*)}]
     \item
-      If $ z \beta_* y $ then $ z / z \wedge x \cong y / y \wedge x $. \label{11.1}
+      If $ z \beta_* y $ then $ z / \left(z \wedge x\right) \cong y / \left(y \wedge x\right) $. \label{11.1}
     \item
-      If $ z \beta_* b $ then $ z / z \wedge a \cong b / 0 $. \label{11.2}
+      If $ z \beta_* b $ then $ z / \left(z \wedge a\right) \cong b / 0 $. \label{11.2}
     \item
       Let $ z \leq b $. Then $ z \beta_* b $ if and only if $ z = b $.\label{11.3}
     \item
@@ -357,12 +270,12 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
   \begin{enumerate}
     \item
       Since $ y $ is a supplement of $ x $ in $ L $ and $ z \beta_* y $, 
-      $ x \vee y = x \vee z = 1 $. Since $ z / z  \wedge x \cong z \vee x / x $ and 
-      $ y \vee x / x \cong y / y \wedge x $, $ z / z \wedge x \cong y / y \wedge x $. 
-      Thus $ z / z \wedge x \cong y / y \wedge x $.
+      $ x \vee y = x \vee z = 1 $. Since $ z / \left(z  \wedge x\right) \cong \left(z \vee x\right) / x $ and 
+      $ \left(y \vee x\right) / x \cong y / \left(y \wedge x\right) $, $ z / \left(z \wedge x\right) \cong y / \left(y \wedge x\right) $. 
+      Thus $ z / \left(z \wedge x\right) \cong y / \left(y \wedge x\right) $.
     \item
-      By \ref{11.1}, $ z / z \wedge a \cong b / a \wedge b $. Since $ a \oplus b = 1 $, 
-      $ z / z \wedge a \cong b / 0 $.
+      By \ref{11.1}, $ z / \left(z \wedge a\right) \cong b / \left(a \wedge b\right) $. Since $ a \oplus b = 1 $, 
+      $ z / \left(z \wedge a\right) \cong b / 0 $.
     \item
       $ ( \Rightarrow ) $: 
       Since $ a \oplus b = 1 $ and $ z \beta_* b $, $ a \vee z = 1 $. Also, since $ b $ is a supplement of 
@@ -371,8 +284,8 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
       Clear from reflexive property of $ \beta_* $.
     \item
       $ ( \Rightarrow ) $:
-      Since $ a $ is weak supplement of $ b $ and $ z \beta_* b $, it follows from 
-      Theorem \ref{8} \ref{8.2} that $ a $ is also weak supplement of $ z $. Hence $ z \wedge a \ll L $. \\
+      Since $ a $ is a weak supplement of $ b $ and $ z \beta_* b $, it follows from 
+      Theorem \ref{8} \ref{8.2} that $ a $ is also a weak supplement of $ z $ in $ L $. Hence $ z \wedge a \ll L $. \\
       $ ( \Leftarrow ) $ 
       It is clear from Corollary \ref{10}.
   \end{enumerate}
@@ -383,7 +296,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
 \begin{theorem}\label{12}
-  Let $ L $ be a distributive lattice and $ a,b \in L $. If $ a \oplus b = 1 $ and $ a \beta_* x $ 
+  Let $ L $ be a distributive lattice and $ a,b \in L $. If $ a \oplus b = 1 $ and $ a \beta_* x $, 
   then $ a \leq x $ and $ b \wedge x \ll L $.
 \end{theorem}
 \begin{proof}
@@ -399,9 +312,9 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 
 \begin{theorem}\label{13}
   Let $ L $ be a distributive lattice and $ x \in L $. If $ x \beta_* y $ and there exists a 
-  decomposition $ a \oplus b = 1 $ such that $ a \leq x $ and $ b \wedge x \ll L $ then same 
-  decomposition exists for $ y \in L $ such that $ a \leq y $ and $ b \wedge y \ll L $
-\end{theorem}
+  decomposition $ a \oplus b = 1 $ such that $ a \leq x $ and $ b \wedge x \ll L $, then 
+  $ a \leq y $ and $ b \wedge y \ll L $. 
+  \end{theorem}
 \begin{proof}
   Since $ a \leq x $ and $ b \wedge x \ll L $, $ a \beta_* x $ by Theorem \ref{11} \ref{11.4}. 
   Since $ x \beta_* y $ and $ a \beta_* x $, $ a \beta_* y $. 
@@ -419,11 +332,10 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 %
 
 \begin{theorem}\label{14}
-  Let $ x \in L $ and $ k $ be a maximal (except from $ 1 $ ) element of $ L $.
-  \begin{enumerate}[label=(\roman{*}), ref=(\roman{*})]
+  Let $ x \in L $ and $ k $ be a maximal element of $ L $.
+  \begin{enumerate}[label=\textnormal{(\arabic*)}]
     \item
       If $ a, b \in L $ such that $ a \vee b = 1 $, $ b \neq 1 $ and $ x \beta_* a $ then $ x \not\leq b $. \label{14.1}
-      \label{14.1}
     \item
       If $ x \beta_*y $ and $ x \leq k $ then $ y \leq k $. \label{14.2}
     \item
@@ -437,7 +349,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 \begin{proof}
   \begin{enumerate}
     \item
-      Assume that $ x \leq b $. Then $ a \vee b \vee x = 1 $. Since $ x \beta_* a $, $ x \vee b = 1 $ so $ b = 1 $. 
+      Assume that $ x \leq b $. Since $ a \vee b = 1 $ and $ x \beta_* a $, $ x \vee b = 1 $ so $ b = 1 $. 
             %FIXME BEGIN
       This is a contradiction with $ b $ is distinct from $ 1 $. 
             %FIXME END
@@ -449,8 +361,8 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
       Let $ x \beta_* k $ and $ x \not\le k $. Since $ k $ is a maximal element, $ x \vee k = 1 $. Moreover $ k = 1 $, 
       because $ x \beta_* k $. This is a contradiction. Therefore $ x \leq k $.
     \item
-      Let $ x \beta_* k $ and $ w $ is a weak supplement of $ x $ in $ L $. From Theorem \ref{8} \ref{8.2}, 
-      also $ w $ is a weak supplement of $ k $. Hence $ k \vee w = 1 $ and $ k \wedge w \ll L $. 
+      Let $ x \beta_* k $ and $ w $ be a weak supplement of $ x $ in $ L $. From Theorem \ref{8} \ref{8.2}, 
+      $ w $ is a weak supplement of $ k $ in $ L $. Hence $ k \vee w = 1 $ and $ k \wedge w \ll L $. 
       Since $ x \beta_* k $, $ x \leq k $ by \ref{14.3}. Since $ x \vee w = 1 $ 
       and $ x \leq k $, the modular law yields $ k = x \vee ( k \wedge w ) $.
   \end{enumerate}
@@ -462,16 +374,16 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 
 \begin{theorem}\label{15}
     %FIXME BEGIN
-  Let $ a, b \in L $ and $ a \oplus b = 1 $. For $ x,s \in a/0 $, if $ x \beta_* s $ in $ L $ then $ x \beta_* s $ in $ a/0 $.
+  Let $ a, b \in L $ and $ a \oplus b = 1 $. For $ x,s \in a/0 $, if $ x \beta_* s $ in $ L $, then $ x \beta_* s $ in $ a/0 $.
     %FIXME END
 \end{theorem}
 
 \begin{proof}
-  Let $ k \in L $ such that $ x \vee k = a $. Then $ (x \vee k ) \oplus b = 1 $, and so $ x \vee ( k \vee b ) = 1 $. 
-  Hence $ s \vee ( k \vee b ) = 1 $ since $ x \beta_* s $. Then $ \left[ (s \vee k ) \vee b \right] \wedge a = a $, 
+  Let $ k \in a/0 $ such that $ x \vee k = a $. Then $ (x \vee k ) \oplus b = 1 $, and so $ x \vee ( k \vee b ) = 1 $. 
+  Hence $ s \vee ( k \vee b ) = 1 $ since $ x \beta_* s $ in $ L $. Then $ \left[ (s \vee k ) \vee b \right] \wedge a = a $, 
   it follows that $ ( s \vee k ) \vee ( b \wedge a ) = a $. We obtain that $ s \vee k = a $. Similarly, interchanging 
-  roles of $ x $ and $ s $, we can show that $ x \vee t = a $ for any element $ t $ of $ L $ such that $ s \vee t = a $. 
-  Therefore $ x \beta_* s \in a/0 $.
+  roles of $ x $ and $ s $, we can show that $ x \vee t = a $ for any element $ t $ of $ a/0 $ such that $ s \vee t = a $. 
+  Therefore $ x \beta_* s $ in $ a/0 $.
 \end{proof}
 
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -487,7 +399,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
   Let $ t \in 1/x $ such that $ ( x \vee y ) \vee t = 1 $. Since $ x \vee k = 1 $, $ t \wedge ( x \vee k ) = t \wedge 1 $, 
   and so $ x \vee ( t \wedge k ) = t $ by the modular law. Hence $ x \vee y \vee ( t \wedge k ) = 1 $. 
   It follows that $ x \vee y \vee \left[ y \vee ( t \wedge k ) \right] = 1 $. Since $ x \vee y \ll 1/y $, 
-  $ y \vee ( t \wedge k ) = 1 $. Then by, $ t \vee ( k \wedge y ) = 1 $. 
+  $ y \vee ( t \wedge k ) = 1 $. Then by Lemma \ref{7}, $ t \vee ( k \wedge y ) = 1 $. 
   Since $ k \wedge y \leq k \wedge x $, $ 1 = t \vee ( k \wedge y ) = t \vee ( k \wedge x ) =t $. Therefore $ x \vee y \ll 1/x $.
 \end{proof}
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -495,7 +407,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 %00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
 \begin{theorem}\label{17}
-  Let $x,y,a,b \in L $. If $ a,b \ll L, x \leq y \vee b $ and $ y \leq x \vee a $ then $ x \beta_* y $.
+  Let $x,y,a,b \in L $. If $ a,b \ll L, x \leq y \vee b $ and $ y \leq x \vee a $, then $ x \beta_* y $.
 \end{theorem}
 
 \begin{proof}
@@ -510,7 +422,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 \end{theorem}
 
 \begin{proof}
-  Let $ k \in L $ such that $ (x_1 \vee x_2 ) \vee (y_1 \vee y_2 ) \vee k = 1 $. Since $ x_1 \beta_* x_2 $, 
+  Let $ k \in L $ such that $ (x_1 \vee x_2 ) \vee (y_1 \vee y_2 ) \vee k = 1 $. Since $ x_1 \beta_* y_1 $, 
   $ y_1 \vee x_2 \vee y_2 \vee k = 1 $ and $ x_1 \vee x_2 \vee y_2 \vee k = 1 $. Also since 
   $ x_2 \beta_* y_2 $, $ y_1 \vee y_2 \vee k = 1 $ and $ x_1 \vee x_2 \vee k = 1 $. 
   By Theorem \ref{3} \ref{3.1}, $ ( x_1 \vee x_2 ) \beta_* ( y_1 \vee y_2 ) $.
@@ -518,7 +430,7 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
 
 
 \begin{corollary}\label{19}
-  Let $ x, y_1, y_2,...,y_n \in L $. If $ x \beta_* y_i $ for $ i=1,2,...,n $ then $ \displaystyle x \beta_* \bigvee_{i=1}^n y_i $.
+  Let $ x, y_1, y_2,...,y_n \in L $. If $ x \beta_* y_i $ for $ i=1,2,...,n $, then $ \displaystyle x \beta_* \bigvee_{i=1}^n y_i $.
 \end{corollary}
 \begin{proof}
   Clear from Theorem \ref{18}.
@@ -543,14 +455,14 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
   Let $ rad(L)=0 $ and $ a \oplus b = 1 $. If $ x \beta_* a $ for some $ x \in L $ then $ x \oplus b = 1 $. 
 \end{theorem}
 \begin{proof}
-  Since $ a \oplus b = 1 $, $ b $ is a supplement of $ a $. 
-  Since $ x \beta_* a $, $ b $ is also a supplement of $ x $ by Theorem \ref{8} \ref{8.1}. 
+  Since $ a \oplus b = 1 $, $ b $ is a supplement of $ a $ in $ L $. 
+  Since $ x \beta_* a $, $ b $ is also a supplement of $ x $ in $ L $ by Theorem \ref{8} \ref{8.1}. 
   Therefore $ b \vee x = 1 $ and 
-  $ b \wedge x \ll x/0 $. Since $ rad(L)=0 $, $ x \wedge b \leq rad(L) = 0 $. Hence $ x \oplus b = 1 $
+  $ b \wedge x \ll x/0 $. Since $ rad(L)=0 $, $ x \wedge b \leq rad(L) = 0 $. Hence $ x \oplus b = 1 $.
 \end{proof}
 
 \begin{theorem}
-  $ L $ is weakly supplemented if and only if for every $ x \in L $, $ x $ is equivalent to a weak supplement in $ L $.
+  $ L $ is weakly supplemented if and only if for every $ x \in L $, $ x $ is $ \beta_* $ equivalent to a weak supplement in $ L $.
 \end{theorem}
 
 \begin{proof}
@@ -558,12 +470,12 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
   Let $ x \in L $. Since $ L $ is weakly supplemented, there exists $ z \in L $ such that 
   $ x \vee z = 1 $ and $ x \wedge z \ll L $. Also $ x $ is a weak supplement of $ z $ in $ L $. 
   Since $ \beta_* $ relation is reflexive, $ x \beta_* x $. So, every element of $ L $ is 
-  equivalent to a weak supplement element in $ L $. \\
+  $ \beta_* $ equivalent to a weak supplement element in $ L $. \\
   $ ( \Leftarrow ) $
   Let $ x \in L $. By the hypothesis, there exists a weak supplement $ z \in L $ such that 
-  $ x \beta_* z $. Let $ z $ is a weak supplement of $ a $. Thus $ a \vee z = 1 $ and $ a \wedge z \ll L $. 
+  $ x \beta_* z $. Let $ z $ be a weak supplement of $ a $ in $ L $. Thus $ a \vee z = 1 $ and $ a \wedge z \ll L $. 
   Also, $ a $ is a weak supplement element of $ z $ in $ L $. Since $ x \beta_* z $, 
-  $ a $ is also weak supplement of $ x $ by Theorem \ref{8} \ref{8.2}.  
+  $ a $ is also a weak supplement of $ x $ in $ L $ by Theorem \ref{8} \ref{8.2}.  
 \end{proof}
 \begin{remark}
   The converse of Theorem \ref{6} is not always true. We can give an example about that. Let $ K $ be a hollow module which is not simple. 
@@ -571,11 +483,8 @@ A lattice $ L $ is called $ distributive $ if for any elements $ a,b,c $ of $ L 
   Since $ K $ is not simple, $ K $ has a submodule $ T $ with $ T \neq 0 $ and $ T \ll K $. Clearly we see that $ T \times 0 \ll L $ and $ 0 \times T \ll L $ . 
   But $ T \times 0 $ and $ 0 \times T $ don't lie above each other.
 \end{remark}
-
-
-\cleardoublepage
 \nocite{*}
-\printbibliography[maxnames=99]
-
+\bibliography{beta_star_relation_on_lattices}
+\bibliographystyle{mmn}
 \end{document}
 
